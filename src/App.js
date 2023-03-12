@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Login from "./components/Login";
 import Alert from "./components/Alert";
 
 function App() {
+
+  const [alerta, setAlerta] = useState("");
+
   return (
-    <div className="">
-      <Login message=""/>
-      <Alert />
+    <div className="container w-50">
+      <Login setAlerta={setAlerta}/>
+      <Alert alerta={alerta}/>
     </div>
   );
 }
